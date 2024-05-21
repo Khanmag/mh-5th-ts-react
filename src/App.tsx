@@ -1,10 +1,9 @@
-import L01 from "./L01";
+import LessonOne from "./LessonOne";
 
 function App() {
   return (
     <>
-    <L01 />
-      fadsgsdfsdafsd
+      <LessonOne />
     </>
   );
 }

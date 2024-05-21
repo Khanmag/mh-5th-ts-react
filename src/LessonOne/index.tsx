@@ -1,4 +1,4 @@
-const L01 = () => {
+const LessonOne = () => {
   //В формате React проекта мы будем писать TypeScript код в подобных функциях
   // let a: number = 123;
   // a = 43
@@ -66,11 +66,11 @@ const L01 = () => {
   // };
   // const someStr: string = someFunc(3, "5")
   // const someNum: number = someFunc(3)
-  const test: string = "qwerty"
-  console.log(test);
+  const text: string = "TS start"
+  console.log(text);
   
   //
-  return <div>L01</div>;
+  return <div>L01 - {text}</div>;
 };
 
-export default L01;
+export default LessonOne;
