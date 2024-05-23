@@ -1,11 +1,5 @@
-import LessonOne from "./LessonOne";
-
 function App() {
-  return (
-    <>
-      <LessonOne />
-    </>
-  );
+  return <>QWERTY</>;
 }
 
 export default App;
