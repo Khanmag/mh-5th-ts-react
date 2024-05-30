@@ -32,6 +32,22 @@ const addUsersToPage = (userList) => {
 
 // addUsersToPage(["Madina", "Olesya", "Sasha"])
 
+const getUsersList = async () => {
+  const response = await fetch("https://jsonplaceholder.typicode.com/users");
+  const data = await response.json();
+  // console.log(data);
+  // console.log([1, 2, 3, 4].map( (item, index, arr) => {
+  //   return item * 2
+  // }));
+  const correctArr = data.map((item) => {
+    return item.name;
+  });
+  console.log(correctArr);
+  addUsersToPage(correctArr)
+};
+
+getUsersList();
+
 // Задание - создать функцию, которая добавить нумерованный список дел на день
 // addTodoDaity(["Встать", "Позавтракать", "Поработать", "Поспать",])
 // 1. Встать
@@ -56,5 +72,7 @@ const arr = [
 arr.forEach((item) => {
   const image = document.createElement("img");
   image.src = item;
+  image.className = "picture";
+  image.style.width = "100px";
   rootNode.append(image);
 });
