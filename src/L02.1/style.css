@@ -1,9 +1,22 @@
+.grid2x3 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-rows: repeat(auto-fill, 200px);
+  gap: 2rem;
+  padding: 2rem;
+  /* rem - <html> font-size */
+  /* em - font-size родителя */
+  justify-content: center;
+}
+
 .imageBox {
   width: 200px;
   height: 200px;
   border: 3px solid black;
   border-radius: 20px;
   overflow: hidden;
+  cursor: pointer;
 }
 .imageBox img {
   width: inherit;
@@ -15,4 +28,13 @@
 .imageBox:first-child img {
   object-position: left;
 }
-
+.closedImageBox {
+  background-color: lightgray;
+  background-image: url("../assets/memoryGame/back.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.closedImageBox > * {
+  display: none;
+}

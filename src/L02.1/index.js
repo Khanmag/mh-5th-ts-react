@@ -90,7 +90,24 @@ const addPhoto = (content, container) => {
   image.alt = content.alt;
   image.title = content.title;
   // image.style.width = "400px"
-  div.className = "imageBox";
+  // div.className = "imageBox";
+  div.classList.add("imageBox")
+  div.classList.add("openedImageBox")
+  // div.classList.
+  // onclick - один из обработчиков событий, event
+  // div.onclick = (event) => {
+  div.onclick = () => {
+    // const currentCard = event.target
+    // console.log("КЛИК", div.classList.contains("openedImageBox"));
+    if (div.classList.contains("openedImageBox")) {
+      div.classList.remove("openedImageBox")
+      div.classList.add("closedImageBox")
+    } else {
+      div.classList.remove("closedImageBox")
+      div.classList.add("openedImageBox")
+    }
+
+  }
 
   // <div> < img src="..." /> </div>
   div.append(image);
@@ -101,6 +118,7 @@ const addPhoto = (content, container) => {
 const addPhotosBox = (photosList) => {
   const rootNode = document.getElementById("root"); // нахдим div с id = root
   const imageContainer = document.createElement("section"); // <section />
+  imageContainer.className = "grid2x3" // <section class="grid2x3" />
   rootNode.append(imageContainer); // <div id="root"><section /></div>
   // Пробегаемся по массиву и для каждого элемента вызываем функцию addPhoto - те добавляем фото
   photosList.forEach((item) => {
@@ -112,5 +130,5 @@ const addPhotosBox = (photosList) => {
     );
   });
 };
-
-addPhotosBox(arr)
+// [...arr, ...arr] - дважды добавляем в новый массив все элементы массива arr
+addPhotosBox([...arr, ...arr])
