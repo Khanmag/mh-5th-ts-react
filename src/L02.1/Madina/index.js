@@ -18,8 +18,8 @@ const addPhoto = (content, container) => {
     const div = document.createElement("div");
     
     image.src = content.src;
-    image.alt = content.alt;
-    image.title = content.title
+    // image.alt = content.alt;
+    // image.title = content.title
 
     // div.className = "imageBox";
     div.classList.add("imageBox")
