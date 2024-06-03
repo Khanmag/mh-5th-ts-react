@@ -18,3 +18,13 @@
   height: 100%;
   object-fit: contain;
 }
+.closedImageBox {
+  background-color: lightgray;
+  background-image: url("../assets/memoryGame/back.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.closedImageBox > * {
+  display: none;
+}
